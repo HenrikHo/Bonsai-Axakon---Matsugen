@@ -1,0 +1,166 @@
+<div id="popUpWrap1" class="popUpWrap">
+    <div class="popUp" id="contentWrapperLogIn">
+        <div class="topHead">LOGGA IN</div>
+        <div id="logInDiv" class="formDiv">
+            <input class="inputLogIn txtInput" id="userName" placeholder="Email" value="hej@gmail.com">
+            <input class="inputLogIn txtInput" id="password" placeholder="Lösenord" type="password" value="123">
+            <div class="checkboxSection">
+                <label>
+                    <div class="checkbox">
+                        <input id="keepMeLoggedInBox" type="checkbox" onclick="checkboxClick(this)">
+                    </div>
+                </label>
+                <label id="keepMeLoggedIn" for="keepMeLoggedInBox">Håll mig inloggad</label>
+            </div>
+            <button id="acceptButton" class="submitBtn" onclick="logIn()">LOGGA IN</button>
+            <div class="logInLink">
+                <a class="logInLinkText" id="lostPassword" onclick="forgottenPassword()">Glömt ditt lösenord?</a>
+                <a class="logInLinkText" id="logInLinkTextCreateAccount" >Skapa ett konto</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="popUpWrap3" class="popUpWrap">
+    <div class="popUp contentWrapperForgottenPass" >
+        <div class="topHead">GLÖMT LÖSENORD</div>
+        <div class="forgottenPassDiv formDiv">
+            <div class="separatingSpace">
+            <p> Har du glömt ditt lösenord? Skriv in din e-mail så fixar vi detta!</p>
+
+            <input class="inputLogIn txtInput" id="forgottenUserName" placeholder="Email">
+
+            <button id="sendNewPassword" class="submitBtn" onclick="sendNewPassword()">SKICKA</button>
+            </div>
+            <div class="logInLink" id="forgottenPassLink">
+                <a class="logInLinkText" onclick="redirectToLogIn()">Logga in</a>
+                <a class="logInLinkText" onclick="redirectToCreateAcc()">Skapa ett konto</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="popUpWrapLoader">
+    <img id="logoLoader" src="img/Matsugen_symbol_Orange_pos.png">
+  <!---------  <div id="loader"><img id="logoLoader" src="img/Matsugen_symbol_Orange_pos.png"></div>---------->
+</div>
+
+
+<div id="popUpWrap2" class="popUpWrap">
+    <div class="popUp" id="contentWrapperMyPage">
+        <div class="topHead">MINA UPPGIFTER</div>
+        <div id="myPageUnderFirstHead" class="settingsSectionDiv">
+            <div class="myPageSection">
+                <input class="myPageInputHalf txtInput" id="myPageFirstName" placeholder="Förnamn *" type="text" tabindex="1">
+                <input class="myPageInputHalf txtInput" id="myPageSurName" placeholder="Efternamn *" type="text" tabindex="2">
+            </div>
+            <div class="myPageSection">
+                <input class="myPageInputHalf txtInput" id="myPagePhoneNumber" placeholder="Telefonnummer *" type="text" tabindex="3">
+                <input class="myPageInputHalf txtInput" id="myPageEmail" placeholder="Email *" type="text" tabindex="4">
+            </div>
+            <div class="myPageSection">
+                <input class="myPageInputHalf txtInput" id="myPagePassword" placeholder="Lösenord *" type="password" tabindex="5">
+                <input class="myPageInputHalf txtInput" id="myPagePasswordConf" placeholder="Bekräfta lösenord *" type="password" tabindex="6">
+            </div>
+        </div>
+        <div class="topHead" id="adressTitle">MIN ADRESS</div>
+        <div id="myPageSecondBody" class="settingsSectionDiv">
+            <div class="myPageSection">
+                <input class="myPageInputHalf txtInput" id="myPageAddress" placeholder="Adress *" tabindex="7">
+                <input class="myPageInputHalf txtInput" id="myPagePostCode" placeholder="Postnummer *" tabindex="8">
+            </div>
+            <div class="myPageSection">
+                <input class="myPageInputHalf txtInput" id="myPageCity" placeholder="Ort *" tabindex="9">
+                <input class="myPageInputHalf txtInput" id="myPageApNr" placeholder="Lägenhetsnummer" tabindex="10">
+            </div>
+            <div class="myPageSection">
+                <input class="myPageInputHalf txtInput" id="myPageFloor" placeholder="Våning" tabindex="11">
+                <input class="myPageInputHalf txtInput" id="myPageDoorCode" placeholder="Portkod" tabindex="12">
+            </div>
+            <div class="myPageSection">
+                <textarea class="myPageInputMedium txtInput" id="myPageOtherInfo" placeholder="Övrig information" tabindex="13"></textarea>
+            </div>
+        </div>
+        <div id="myPageLastBody">
+            <p class="txt14 opacity07 " id="obligated"> * = obligatoriska fält </p>
+            <div class="checkboxSection">
+                <label>
+                    <div class="checkbox"><input type="checkbox" id="termsConfCheckbox" onclick="checkboxClick(this)"></div>
+                </label>
+                <label class="checkboxTxt" id="termsAndConditions" for="termsConfCheckbox" >
+                    Jag har läst och godkänner <a href="" id="conditionsRegister" class="conditionsClass conditionsColor">villkoren</a>
+                </label>
+            </div>
+            <!--
+            <div class="checkboxSection checkboxSectionLast">
+                <label>
+                    <div class="checkbox"><input type="checkbox" id="newsCheckbox" onclick="checkboxClick(this)"></div>
+                </label>
+                <label class="checkboxTxt" for="newsCheckbox" id="labelNewsCheckbox">
+                    Jag vill få erbjudanden och nyhetsbrev av matsugen.se
+                </label>
+            </div>
+            -->
+            <button id="myPageRegister" class="submitBtn" onclick="registerUser()" >REGISTRERA</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="popUpWrap5" class="popUpWrap noScroll">
+    <div class="popUp " id="conditionsDiv">
+        <div class="topHead" id="topHeadDivConditions">
+                 ALLMÄNA VILKOR
+            <a id="conditionsBack" onclick="hideConditions()">X</a>
+            </div>
+        <div id="conditionsListDiv" class="formDiv">
+            <ul id="conditionsList" class="infoList">
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Under information
+                </li>
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Under information
+                </li>
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </li>
+                <li class="titelTxt"> §. TITELTEXT
+                </li>
+                <li class="infoText"> Under information
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<script type="text/javascript" src="js/logIn.js"></script>
+
+<div id="popUpWrapChat" >
+    <div class="popUp" id="contentWrapperChat">
+        <div class="topHead" onclick="dontChatWithUs()" >CHAT SUPPORT</div>
+        <div id="chatDiv" class="formDiv">
+                <div class="messageDiv">
+                    <div id="putMessageHere">
+
+                    </div>
+                </div>
+                <div class="bottomChat">
+                <input class="inputLogIn txtInput" id="typeMessage" placeholder="Skriv ett meddelade...">
+
+                <button id="send" class="submitBtn" onclick="sendMessage()">SKICKA</button>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div id="footerContainer">
+    <div id="footer">
+        <ul id="footerLinkPrimary">
+            <li class="footerElement">
+                <a class="menuLink" href="/web/faq.php" onclick="sessionStorage.setItem('selectedPage', '1')">FRÅGOR OCH SVAR</a>
+            </li>
+            <li class="footerElement">|</li>
+            <li class="footerElement">
+                <a class="menuLink" id="menuLink2" href="../web/info.php" onclick="sessionStorage.setItem('selectedPage', '2')">OM OSS</a>
+            </li>
+            <li class="footerElement">|</li>
+            <li class="footerElement">
+                <a class="menuLink" id="menuLink3" href="../web/contact.php" onclick="sessionStorage.setItem('selectedPage', '3')">KONTAKT</a>
+            </li>
+            <li class="footerElement">|</li>
+            <li class="footerElement">
+                <a class="menuLink" id="menuLink4" href="../web/connectrestaurant.php" onclick="sessionStorage.setItem('selectedPage', '4')">ANSLUT DIN RESTAURANG</a>
+            </li>
+            <li class="footerElement">|</li>
+            <li class="footerElement">
+                <a class="menuLink" id="menuLink5" href="../web/work.php" onclick="sessionStorage.setItem('selectedPage', '5')">ARBETA HOS OSS</a>
+            </li>
+            <li class="footerElement">|</li>
+            <li class="footerElement">
+                <a href="../web/suggestrestaurant.php" onclick="sessionStorage.setItem('selectedPage', '6')" >FÖRESLÅ DIN FAVORIT RESTAURANG</a>
+            </li>
+            <li class="footerElement">|</li>
+            <li class="footerElement">
+                <a id="conditionsFooter" onclick="showConditions()">ALLMÄNNA VILLKOR</a>
+            </li>
+        </ul>
+    </div>
+</div>

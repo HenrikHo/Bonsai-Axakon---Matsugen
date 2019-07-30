@@ -1,0 +1,3249 @@
+*{
+    box-sizing: border-box;
+   /* font-family: 'Lato', sans-serif; */
+    font-family: 'pantonregular', 'Lat';
+    z-index: 1;
+    cursor: default;
+    user-select: none;
+   /* -webkit-user-select: none;*/
+    -moz-user-select: none;
+    /*-ms-user-select: none;*/
+    font-size: 14px;
+    color: #292929;
+    outline: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none !important;
+    outline: 0 !important;
+    cursor: pointer !important;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #DC4405;
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header, footer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header{
+    background-color: #FFFFFF;
+    height: 70px;
+    max-height: 70px;
+    opacity: 0;
+}
+
+#indexHeader{
+    height: 66px;!important;
+}
+footer{
+    min-height: 100px;
+    opacity: 0;
+}
+
+input[type='checkbox']{
+    cursor: pointer;
+    display: none;
+}
+
+.body{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: relative;
+    display: block;
+    clear: both;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #DC4405;
+    border-radius: 0;
+}
+
+.noScroll::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
+
+
+
+/*footer.html */
+#footerContainer{
+    background-color: #DC4405;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+#footer {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+}
+
+#footerLinkPrimary{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+}
+#footerLinkPrimary a:hover {
+    color: #828282;
+}
+
+
+
+.footerElement{
+    margin-right: 8px;
+    display: inline;
+    color: #FFFFFF;
+}
+
+#footerLinkPrimary a{
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+#chatImgDiv{
+    width: 70px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#chatImgDiv *{
+    cursor: pointer;
+}
+
+#chatImg{
+    width: 40px;
+    height: auto;
+    position: relative;
+    margin: 10px 0 0;
+}
+
+
+
+
+
+/* head.html */
+
+.topButtons{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    vertical-align: top;
+}
+
+.headLogInButtons{
+    width: 160px;
+    height: 35px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 23px 23px 23px 23px;
+    border: none;
+    font-size: 11px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+#headLogIn{
+    background-color: #DC4405;
+}
+#headPageCreateAccount{
+    background-color: #868686;
+}
+
+.popUpWrap{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    display: none;
+    z-index: 999999;
+}
+
+#popUpWrapLoader{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    display: none;
+    z-index: 9999999;
+}
+
+#logoLoader{
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    display: block;
+    z-index: 99;
+    margin: auto;
+    border: 10px solid transparent;
+    border-radius: 50%;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    opacity: 0.5;
+}
+
+#contentWrapperLogIn {
+    position: relative;
+    width: 100%;
+    max-width: 290px;
+    height: 415px;
+    margin: 0 auto 50px;
+    top: 20%;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+.contentWrapperForgottenPass{
+    position: relative;
+    width: 100%;
+    max-width: 290px;
+    height: 415px;
+    margin: 0 auto 50px;
+    top: 20%;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+#forgottenUserName{
+    margin:25px 0 25px 0;
+}
+.wrapper{
+    position: relative;
+    display: inline-block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+#logInDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    padding: 15px 25px 0 25px;
+}
+
+#logInDiv .checkbox{
+    margin: 15px 15px 15px 10px;
+}
+
+
+.forgottenPassDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    position: relative;
+    overflow: hidden;
+    padding: 15px 25px 0 25px;
+}
+
+
+
+.topHead{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #DC4405;
+    text-transform: capitalize;
+    padding: 15px;
+    font-weight: 700;
+}
+
+.inputLogIn {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin: auto;
+}
+#keepMeLoggedInBox{
+    margin: 5px 0;
+}
+#keepMeLoggedIn{
+    color: #868686;
+    font-size: 14px;
+}
+.logInLink{
+    position: relative;
+    display: block;
+    height: auto;
+    margin: 30px 0 15px;
+}
+
+.separatingSpace{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.logInLinkText{
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #DC4405;
+    cursor: pointer;
+    margin: 10px 5px;
+    font-weight: 700;
+}
+
+/*content wrapper MyPage*/
+#contentWrapperMyPage{
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    position: relative;
+    margin: 0 auto 50px;
+    top: 10%;
+    left: 2%;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+#myPageUnderFirstHead {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    vertical-align: top;
+    text-align: center;
+    padding: 15px;
+}
+.myPageSection {
+    width: 100%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    padding: 0 5px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.myPageUnderOnlySection{
+    width: 100%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    padding: 0 5px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.myPageUnderOnlySection input[type='text']{
+    max-width: 170px !important;
+}
+.myPageInputHalf{
+    width: 350px;
+    height: 40px;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.myPageInputOneThird{
+    width: 350px;
+    height: 40px;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.myPageInputXSmall{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+
+#myPageSecondBody{
+    width: 100%;
+    height: auto;
+    position: relative;
+    justify-content: space-between;
+    vertical-align: top;
+    text-align: center;
+    padding: 15px 15px 5px;
+    display: block;
+}
+#myPageSecondBodyLeft{
+    width: 50%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    padding: 0 5px;
+}
+#myPageSecondBodyRight{
+    width: 50%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    padding: 0 5px;
+}
+.myPageSecondInputSmall{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin: 5px 0;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+.myPageInputMedium{
+    width: 100%;
+    height: 90px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    resize: none;
+    margin: 5px 0;
+}
+.myPageInputMedium:focus{
+    outline: none;
+}
+
+
+.checkbox{
+    background-color: transparent;
+    width: 13px;
+    height: 13px;
+    align-self: center;
+    border: 1px solid #DC4405;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.checkbox label:focus{
+    background-color: #66afe9 !important;
+}
+
+.checkboxBtn{
+    margin: 15px 5px 15px 15px;
+    align-self: center;
+}
+.checkboxTxt{
+    margin: 15px 15px 15px 0;
+    color: #3E3E3E;
+    font-size: 14px;
+    align-self: center;
+}
+
+#myPageLastBody{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    padding: 0 15px 15px;
+}
+
+.checkboxSection{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.checkboxSection *{
+    outline: none;
+}
+
+.opacity05{
+    opacity: 0.5;
+}
+.opacity08{
+    opacity: 0.8;
+}
+.opacity07{
+    opacity: 0.7;
+}
+
+.conditionsColor{
+    color: dodgerblue;
+}
+
+.checkboxSectionLast .checkboxTxt{
+    margin: 0 15px 15px 0;
+}
+
+.checkboxSectionLast .checkbox{
+    margin: 0 15px 15px 15px;
+}
+
+#paymentCheckboxBody .checkboxSection{
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.submitBtn{
+    background-color: #DC4405;
+    color: #FFFFFF;
+    font-size: 14px;
+    width: 100%;
+    max-width: 175px;
+    height: 45px;
+    min-height: 35px;
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 15px auto 0;
+    font-weight: 700;
+}
+
+#sendNewPassword{
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+#myPageRegister{
+    margin: 30px auto 15px;
+}
+
+
+.hideSideBar{
+    width:101% !important;
+    padding-right: 8px !important;
+}
+
+.upperWrapper{
+    background-color: #DC4405;
+    width: 100%;
+    height: 536px;
+    position: relative;
+    display: block;
+    clear: both;
+}
+
+.upperWrapper h1{
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 400;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    text-shadow: 0px 0px 5px #3E3E3E;
+}
+
+.homeBannerImg{
+    width: 100%;
+    height: 530px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    object-fit: cover;
+    vertical-align: top;
+    display: none;
+}
+
+.homeLogo{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+
+.roundTransparentWhite{
+    background-color: rgba(255, 255, 255, 0.50);
+    width: 90%;
+    max-width: 450px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+}
+.txtInput{
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
+    cursor: text;
+    font-size: 14px;
+    padding: 10px;
+}
+
+
+.txtInput::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #868686;
+}
+.txtInput::-moz-placeholder{
+    font-size: 14px;
+    color: #868686;
+}
+.txtInput:-ms-input-placeholder{
+    font-size: 14px;
+    color: #868686;
+}
+.txtInput:-moz-placeholder{
+    font-size: 14px;
+    color: #868686;
+}
+#homeAddress{
+/*    background-image: url('/rtc/img/Matsugen_symbol_CMYK_pos_25.png');
+    background-repeat: no-repeat;
+    padding-left: 30px;*/
+
+    width: 80%;
+    max-width: 350px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+}
+
+#homeSearchBtn{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    border-radius: 60px;
+    padding: 0; !important;
+
+}
+
+.roundBtn{
+    background-color: #DC4405;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    text-transform: capitalize;
+
+}
+.btnLogo{
+    width: 75px;
+    height: 75px;
+    cursor: pointer !important;
+}
+
+#getGeoImg{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-top: 40px;
+    cursor: pointer;
+    margin-left: 100px;
+    /*-webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;*/
+}
+
+.bottomWrapper{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.bottomTxtWrapper{
+    width: 500px;
+    height: auto;
+    min-height: 270px;
+    position: relative;
+    margin: 0 100px 0;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bottomImgWrapper{
+    position: relative;
+    width: 250px;
+    height: auto;
+    min-height: 270px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bottomLinkWrapper{
+    position: relative;
+    width: 200px;
+    height: auto;
+    min-height: 270px;
+    display: inline-block;
+    vertical-align: top;
+}
+.bottomWrapper h1{
+    position: relative;
+    color: #292929;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 30px 0 15px;
+    text-align: left;
+}
+
+.infoTxt{
+    position: relative;
+    width: 500px;
+    height: auto;
+    font-size: 16px;
+}
+
+.bottomImg{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.bottomLinks{
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.appLink{
+    width: auto;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 15px 0;
+}
+
+.appLinkImg{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#appStoreLink{
+    top: 50px;
+}
+
+#googlePlayLink{
+    top: 200px;
+}
+
+
+
+/* -------------------------- MENU LOGGED IN --------------------------- */
+
+.menuWrapper{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    text-align: center;
+    display: inline-flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+.menuButtons{
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    text-align: center;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: auto 10px;
+}
+
+#menuButtonsWrapper{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.menuButtons{
+    color: #292929;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+#menoLogoLink{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.menuLink{
+    padding: 10px 0;
+    margin: 0 10px;
+    color: #292929;
+}
+
+#menuLogo{
+    position: absolute;
+    background-color: transparent;
+    width: 200px;
+    height: auto;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    left: 5%;
+
+
+}
+#menuLogo img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    outline: none;
+}
+
+#menuSearch {
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    height: 100%;
+    padding: 0 10px;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#menuSearchTxt {
+    width: 100%;
+    max-width: 300px;
+    min-width: 150px;
+    height: 40px;
+    position: relative;
+    right: -15px;
+}
+#menuSearchBtn{
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    position: relative;
+    border-radius: 60px;
+    padding: 0; !important;
+}
+
+.btnLogoMenu{
+    width: 45px;
+    height: 45px;
+    cursor: pointer !important;
+}
+
+
+
+.headSeparator{
+    background-color: #DC4405;
+    width: 100%;
+    height: 6px; /*10px*/
+    margin: 0;
+    padding: 0;
+    display: block;
+    clear: both;
+}
+
+/* ----------------------------------------------------- */
+
+
+.settingsBodyClass{
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+.sectionCenter{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    position: relative;
+    vertical-align: top;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+/*
+.orderDiv{
+    width: 100%;
+    height: 100%;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: inline-flex;
+}*/
+
+.sectionRight{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    position: absolute;
+    vertical-align: top;
+    border-radius: 25px;
+    overflow: hidden;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sectionLeft{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    vertical-align: top;
+    border-radius: 25px;
+    overflow: hidden;
+    right: 50%;
+}
+
+.settingsDivClass{
+    max-width: 750px;
+    left: -100px;
+}
+
+#changePassDiv{
+    max-width: 300px;
+    margin: 50px 0 50px 300px;
+}
+
+#myPageUnderFirstHead #myPageSecondBody #myPageGenderBody{
+    background-color: #FFFFFF;
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 0 2px 0;
+}
+
+.settingsSectionDiv {
+    background-color: #FFFFFF;
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 0 2px 0;
+}
+.settingsLastDiv{
+    background-color: #FFFFFF;
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 0 2px 2px;
+    border-radius: 0 0 25px 25px;
+    text-align: left;
+}
+
+
+#changePassDivContent{
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 0 2px 2px;
+    padding: 20px;
+    border-radius: 0 0 25px 25px;
+}
+
+#logOutBtn, #deleteAccountBtn{
+    background-color: transparent;
+    color: #EB524A;
+    width: 120px;
+    height: 40px;
+}
+
+#deleteAccountBtn{
+    margin-top: 30px;
+    font-size: 11px;
+}
+
+/* -------------------------- Contact --------------------------- */
+#contactWrapper{
+    background-color: #FFFFFF;
+    display: block;
+    padding-bottom: 5%;
+}
+
+.centerTxtWrapper{
+    width: 750px;
+    height: auto;
+    min-height: 270px;
+    position: relative;
+    margin: auto;
+    padding: 50px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#contentInputWrapper{
+    width: 750px;
+    height: auto;
+    min-height: 270px;
+    position: relative;
+    margin: auto;
+    padding: 0 45px 250px;
+}
+
+#inputsContainer{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#contentInputWrapperLeft{
+    width: 50%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    padding: 0 5px;
+}
+
+#contentInputWrapperRight{
+    width: 50%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    padding: 0 5px;
+}
+
+#contactMessage{
+    width: 100%;
+    height: 140px;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    resize: none;
+    margin: 5px 0;
+}
+
+
+#sendMessageButton{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: block;
+    margin: 2px auto 0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #DC4405;
+    border: none;
+    text-transform: capitalize;
+    outline: none;
+    cursor: pointer;
+}
+
+#contactInfo{
+    position: relative;
+    width: 500px;
+    height: auto;
+    font-size: 16px;
+}
+
+/* -------------------------- myorders --------------------------- */
+
+
+
+#myordersBody{
+    display: inline-flex;
+    justify-content: center;
+}
+
+.ordersDivClass{
+    min-width: 630px;
+    max-width: 900px;
+    left: -100px;
+}
+
+
+.wrapperMyOrders {
+    width: auto;
+    display: inline-flex;
+    margin: 0px 0px 30px 250px;
+}
+
+
+.rightSideDivClass{
+    overflow-Y: scroll;
+    max-width: 400px;
+    border: none;
+    border-radius: 0;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    min-width: 350px;
+    max-height: 700px;
+    margin:50px 50px 50px 5px;
+    position: relative;
+    left: -75px;
+}
+
+
+.rightSideObj{
+    max-height: 150px;
+    border: 1px solid #95989A;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.myordersUnderOnlySection{
+    width: 100%;
+    height: 550px;
+    overflow-Y: scroll;
+
+}
+
+#restaurantName{
+    font-weight: 700;
+}
+
+
+#contentOfListFromJs{
+    height: 100%;
+    overflow-Y: scroll;
+}
+.ordersSectionDiv {
+    background-color: #FFFFFF;
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 0 2px 2px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.btnShowOrder{
+    color: #FFFFFF;
+    background-color: #DC4405;
+    width: 140px;
+    height: 30px;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    cursor: pointer;
+}
+.contentElement{
+    font-size: 14px;
+    text-align: left;
+}
+
+.headElement{
+}
+
+.myordersTable p{
+    display: inline;
+
+}
+.myordersTable{
+    list-style-type: none;
+    display: block;
+    padding: 0 15px 15px;
+    margin: auto;
+
+}
+#myordersHead {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.myordersRow{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+
+
+.bottomContainer{
+    border: 1px solid #95989A;
+    border-top: 1px solid #95989A;
+    border-right: 1px solid #95989A;
+    border-left: 1px solid #95989A;
+    border-radius: 5px;
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 150px;
+    font-size: 14px;
+    text-align: left;
+    padding: 5px;
+    margin-bottom: 5px;
+
+}
+
+
+
+#receiptTable{
+    width: 100%;
+}
+#second p{
+    font-size: 11px;
+}
+.col75{
+    width: 75%;
+}
+.col30{
+    width: 30%;
+}
+.col50{
+    width: 50%;
+}
+.col60{
+    width: 60%;
+}
+.col25{
+    width: 25%;
+}
+.col20{
+    width: 20%;
+}
+.col15{
+    width: 15%;
+}
+.col10{
+    width: 10%;
+}
+.col5{
+    width: 5%;
+}
+
+#favorite{
+    color: #5EBCAB;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 0 5px;
+}
+#receiptTxtButton{
+    color: #61B4E4;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 5px 0 10px;
+}
+
+.myOrderMenuTxtBtn{
+    margin: 5px 0 5px;
+}
+
+.totalBorder {
+    border-top: 2px solid #95989A;
+}
+.totalBorderContainer{
+    line-height: 200%;
+}
+
+.contentOfRightSideDiv{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    color: #95989A;
+    padding: 10px 10px 0 10px;
+}
+
+
+.logoImageRightSide{
+    text-align: left;
+    width: 60px;
+    height: 60px;
+}
+
+#rightSideRestaurant{
+    text-align: left;
+    margin: 0;
+    font-weight: 700;
+}
+#rightSideAddress{
+    text-align: left;
+    margin: 0;
+    font-size: 11px;
+    font-weight: bold;
+}
+#rightSidePrice{
+    text-align: left;
+    margin :0;
+    font-size: 11px;
+}
+#ratingRightSide{
+    margin: 0;
+}
+.showMenuTxtButton{
+    color: #DC4405;
+    margin: 0;
+    font-weight: 700;
+}
+
+.contentOfRightSideDivBottom{
+    width: 100%;
+    color: #95989A;
+    padding: 5px;
+}
+
+#inner{
+    border-top: solid 1px #95989A;
+}
+
+#inner p{
+    font-size: 13px
+}
+#eraseAsFavorite{
+    left: 0;
+    max-height: 14px;
+}
+#openHoursRightSide{
+    margin: 0;
+    text-align: right;
+    font-size: 14px;
+}
+#deliveryRightSide{
+    margin: 0;
+    text-align: right;
+    font-size: 14px;
+}
+
+
+/* ---------------------------- SEARCH ---------------------------- */
+
+.contentDiv{
+    padding-top: 25px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.oneElement{
+    padding: 8%;
+    height: 125px;
+    width: 175px;
+    border: 1px solid #95989A;
+}
+
+#trueSearchBody{
+    height: 100%;
+}
+
+#searchBody {
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+.categoryDivClass{
+
+    max-width: 150px;
+    margin: 50px 350px 50px 0;
+    text-align: left;
+    border-radius: 0;
+}
+
+#categoryDiv p {
+    font-weight: 700;
+}
+.categoryObj {
+    display: inline-flex;
+    justify-content: space-between;
+    clear: both;
+    left: 0;
+    font-weight: 400;
+    align-items: center;
+}
+
+.categoryObj .checkbox{
+    margin: 15px 15px 15px 0 !important;
+}
+#resultsWrapper {
+    max-width: 600px;
+    padding: 15px;
+}
+#filterDiv {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    font-size: 14px;
+    vertical-align: top;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #95989A;
+}
+#filterA {
+    width: auto;
+    font-weight: 700;
+}
+.filterA {
+    display: inline;
+}
+#filterOptions {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+#filterOptions p {
+    color: #292929;
+}
+#adsDiv {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0 auto 15px;
+}
+.adsObj {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #95989A;
+    border-image: initial;
+}
+.adsObj p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #61B4E4;
+    padding-bottom: 5px;
+    margin: auto;
+}
+.resultsDiv {
+    color: #292929;
+}
+#resultObjId{
+    display: none;
+}
+
+
+#resultNoMatch{
+    display: none;
+    align-items: center;
+}
+
+.resultsObj {
+    width: 100%;
+    height: auto;
+    border: 1px solid #95989A;
+    border-image: initial;
+    padding: 15px;
+    margin: 0 auto 15px;
+}
+.resultsUpperWrap {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #95989A;
+}
+.resultsObjLogo {
+    /*background-color: #95989A;*/
+    width: 80px;
+    height: 80px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logoImg {
+    height: 100%;
+    width: 100%;
+}
+
+.resultsObjLogo p {
+    padding-bottom: 5px;
+    margin: auto;
+}
+.resultsObjInfo {
+    width: 100%;
+    max-width: 320px;
+    height: 80px;
+    text-align: left;
+    padding: 0 15px;
+    margin: 0 auto 0 0;
+
+}
+.resultsObjInfo p {
+    margin-top: 0;
+}
+.resultsName {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto 5px;
+}
+.resultsAddress {
+    font-size: 16px;
+    margin: 0 auto 10px;
+}
+.resultsMinOrder, .resultsDeliveryPrice {
+    font-size: 14px;
+    margin: 0 auto 5px;
+}
+.resultsAddress, .resultsMinOrder, .resultsDeliveryPrice {
+    color: #95989A;
+    font-weight: 700;
+}
+
+.resultsUpperRightDiv {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.resultsObjRating {
+    width: 130px;
+    height: auto;
+    position: relative;
+    text-align: right;
+    font-size: 14px;
+    margin: auto;
+}
+.resultsMenuLink {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: right;
+    font-weight: 700;
+    color: #DC4405;
+    cursor: pointer;
+    font-size: 14px;
+    margin: auto;
+
+}
+
+.restLogoLink{
+    height: 100%;
+    width: 100%;
+
+}
+
+.resultsObjOpenTime {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    flex-direction: column;
+    margin: 10px 0 0;
+}
+.resultsObjOpenTime p {
+    color: #95989A;
+    font-weight: 700;
+    margin: auto;
+    display: inline;
+}
+.resultsStatus {
+    margin: 0 auto 5px !important;
+}
+/* ---------------------------- Loading spinning Thing ---------------------------- */
+/*#loader {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    display: block;
+    z-index: 99;
+    margin: auto;
+    border: 10px solid #DC4405;
+    border-radius: 50%;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+} */
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ---------------------------- checkOut ---------------------------- */
+
+#bodySitemenu{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    margin: auto;
+    padding: 50px;
+    text-align: left;
+    vertical-align: top;
+}
+#sitemenuWrapper{
+    margin: 25px auto;
+    vertical-align: top;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#topOfBody{
+    width: 100%;
+    max-width: 720px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: #95989A solid 1px;
+}
+#topMiddleDiv{
+    padding-left: 15px;
+}
+
+.ratingRight{
+    text-align: right;
+}
+
+.sitemenuBodyWrapper{
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.spacing{
+    border-top: 50px solid transparent;
+}
+.spaceBetween{
+    width: 15px;
+}
+#categoryDivSitemenu{
+    position: relative;
+    width: 125px;
+    padding-top: 15px;
+    height: 100%;
+}
+
+#sitemenuCategory{
+    margin: 0;
+}
+
+.sitemenuMiddleDiv{
+    min-height: 350px;
+    padding: 15px;
+    position: relative;
+    border-left: #95989A solid 1px;
+}
+
+
+.txt20{
+    font-size: 20px;
+    margin: 0;
+}
+.txt16{
+    font-size: 16px;
+    margin: 0;
+}
+
+.txt14{
+    font-size: 14px;
+    margin: 0;
+}
+.txt11{
+    font-size: 11px;
+    margin: 0;
+}
+
+.prcnt130{
+    font-size: 130%;
+}
+
+.prcnt120{
+    font-size: 120%;
+}
+
+.prcnt110{
+    font-size: 110%;
+}
+
+.prcnt140{
+    font-size: 140%;
+}
+
+
+.sitemenuTable{
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 10px 0;
+
+}
+
+.sitemenuCategoryItem{
+    position: relative;
+    clear: both;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.sitemenuCategoryItem ul{
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    text-align: left;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.sitemenuCategoryTitle{
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    margin: 25px 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.sitemenuCategoryTitleFirst{
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.sitemenuCategoryTitle p, .sitemenuCategoryTitleFirst p{
+    display: inline;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.sitemenuProductItem{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+.sitemenuProductInfo{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sitemenuProductItemSectionFirst{
+    width: calc(100%/2);
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+.sitemenuProductItemSectionLast{
+    width: calc(100%/2);
+    align-items: center;
+    display: inline-flex !important;
+    justify-content: flex-end !important;
+}
+
+.sitemenuProductName{
+    font-weight: 200;
+    margin: 0;
+}
+.sitemenuProductDescription{
+    font-weight: 700;
+    margin: 5px 0 0 !important;
+}
+.sitemenuProductPrice{
+    text-align: right;
+    font-weight: 400;
+    display: inline;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+.sitemenuOpenModifiers{
+    width: 40px;
+    text-align: right;
+    display: inline;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #DC4405;
+    font-weight: bold;
+}
+
+
+.sitemenuProductButton{
+    height: 25px;
+    width: 90px;
+    min-width: 90px;
+    background-color: #DC4405;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 0 25px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.sitemenuProductModifiers{
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.sitemenuProductModifiers li{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 15px;
+}
+.sitemenuModifierButton{
+    min-width: 90px;
+    height: auto;
+    color: #DC4405;
+    cursor: pointer;
+    margin: 0 25px;
+    display: inline;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.sitemenuCheckboxTxt{
+    margin: 0;
+}
+
+.modifierCheckbox{
+    position: relative;
+    font-weight: 200;
+    display: inline-flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+}
+
+.sitemenuRightSideDiv{
+    position: relative;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    }
+
+.cart{
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 250px;
+    min-width: 150px;
+    height: auto;
+    min-height: 600px;
+    max-height: 600px;
+    border: solid 2px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-direction: column !important;
+}
+
+
+.sitemenuRightSideDivHeadClass{
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.sitemenuCheckboxTxt{
+    margin: 0;
+}
+
+.sitemenuCheckbox{
+    width: 100%;
+    height: auto;
+    position: relative;
+    font-weight: 200;
+    display: inline-flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+}
+
+
+.demandsDivClass{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+
+#demandsDiv p{
+    margin: 0 0 5px;
+}
+
+.paymentCardsDiv{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#paymentCartDiv{
+    margin: 50px 0 50px 320px;
+}
+
+.paymentCardLogo{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+.tdNone{
+    display: none;
+}
+
+.sitemenuTableWrapper{
+    width: 100%;
+    height: auto;
+    padding: 0 15px;
+}
+
+.sitemenuTheadDiv{
+    width: 100%;
+    height: auto;
+    max-height: 20px;
+    margin: 15px 0 0;
+    padding: 0;
+}
+.sitemenuTheadDiv table{
+    width: 100%;
+    text-align: center;
+    padding: 0 2px 0 0;
+}
+
+.sitemenuTableDiv{
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: 0 0 15px;
+}
+
+.sitemenuTableDiv::-webkit-scrollbar {
+    width: 2px !important;
+    height: 2px !important;
+}
+.sitemenuRightSideDivTable{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 25px;
+    overflow-y: auto;
+    border-collapse: collapse;
+}
+
+#sitemenuBill{
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.productRow{
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    display: block;
+}
+.productItem{
+    width: 100%;
+    height: 40px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.modifiersList{
+    width: 100%;
+    height: auto;
+    display: block;
+    list-style-type: none !important;
+    padding: 0 0 10px !important;
+    margin: 0 !important;
+}
+
+.modifierRow{
+    width: 100%;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.05);
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.modName{
+    max-width: 110px;
+    height: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.modPlus{
+    font-style: normal;
+    font-size: 15px;
+}
+
+.sitemenuRightSideDivTableBodyBottom{
+    width: 100%;
+    height: 40px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.sitemenuRightSideDivTableHead{
+    box-shadow: 0 1px 0 0 #E0E0E0;
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sitemenuRightSideDivTableBodyBottom{
+    height: 40px;
+}
+
+.sitemenuRightSideDivSummary{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sitemenuCartPay{
+    background-color: #5EBCAB;
+    margin: 25px 25px 0;
+}
+.cartRemoveBtnTd{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartRemoveBtn{
+    color: #DC4405;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    margin: 0 0 2px;
+    padding: 0;
+    text-transform: lowercase;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+}
+
+.modifiersPopUp{
+    background-color: rgba(0, 0, 0, 0.5);;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    display: none;
+    z-index: 99;
+}
+
+.modifiersPopUpWrapper{
+    background-color: #FFFFFF;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto 50px;
+    top: 20%;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modifiersPopUpList{
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.05);
+}
+.modifiersPopUpList li{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 15px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+}
+
+.modifiersPopUpTop{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.modifiersPopUpMiddle{
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+}
+
+.modifiersPopUpBottom{
+    width: 100%;
+    height: 50px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.modifiersPopUpBottom .sitemenuProductButton{
+    width: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.modifierPopUpClose{
+    width: 90px;
+    text-align: center;
+    font-weight: 400;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+.modifierPopUpTitle{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.removeFavourite{
+}
+
+#favouritesTitle{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #DC4405;
+    background-color: transparent;
+    padding: 15px;
+    font-weight: 700;
+}
+
+
+/*---------------PAYMENT--------------*/
+
+
+#myOrderCheckboxDiv{
+    margin: 15px 0;
+}
+
+
+
+#paymentCheckboxBody{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    clear: both;
+    padding: 5px 15px 15px;
+}
+.switch{
+    background-color: #FFFFFF;
+    width: 120px;
+    height: 30px;
+    border: solid 2px #DC4405;
+    border-radius: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.switchTxt{
+    color: #DC4405;
+    font-weight: 700;
+    font-size: 14px;
+    align-self: center;
+    margin: 0 15px 3px !important;
+    cursor: pointer;
+}
+
+label input[type='checkbox']{
+    display: none;
+}
+
+input:checked + .switch {
+    background-color: #DC4405;
+    border: none;
+}
+input:checked + .switch label {
+    color: #FFFFFF;
+}
+
+.switchDiv{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    clear: both;
+}
+.switchDiv label{
+    margin: 0 15px;
+}
+.switchDiv .switchWrapper{
+    width: 300px;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.switchWrapper *{
+    outline: none;
+}
+
+.paymentLastDiv{
+    background-color: #FFFFFF;
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 0 2px 2px;
+    border-radius: 0 0 25px 25px;
+    text-align: center;
+}
+.paymentLastDiv .checkboxSection{
+    display: inline-flex;
+    justify-content: center;
+}
+
+.paymentLastDiv .submitBtn{
+    background-color: #5EBCAB;
+    width: 200px;
+}
+
+
+
+/*---------------OrderCountdown--------------*/
+.animationDivClock{
+    position: relative;
+    color: #292929;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+
+}
+
+.clockDivs{
+    padding: 25px;
+    border-radius: 3px;
+    width: 120px;
+    background: #DC4405;
+    color: #FFFFFF;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.clockDivs span{
+    color: #FFFFFF;
+}
+
+.clockTimes{
+    display: inline-flex;
+}
+
+.timerDivs{
+    padding: 20px;
+    display: inline-block;
+}
+
+.clockDivs div > span{
+    width:100px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 3px;
+    background: #DC4405;
+}
+
+.timeText{
+    padding-top: 5px;
+    font-size: 25px;
+    color: #292929;
+}
+.countdowngif{
+    width: 500px !important;
+    height: auto;
+    position: absolute;
+    transform: translateX(-50%);
+    object-fit: cover;
+    display: none;
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+}
+.clockFonts{
+    font-size: 50px;
+}
+
+#gifDiv{
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    position: relative;
+    font-size: 100px;
+    display: inline-block;
+
+}
+
+#dinorderbehandlas{
+    font-size: 25px;
+}
+.TackFörDinBeställning {
+    text-align: center;
+    padding: 0 0 0 0;
+    position: relative;
+    margin: 0; !important;
+    font-size: 40px;
+
+}
+
+.orderCountdown{
+    display: inline-flex;
+    justify-content: center;
+}
+
+.countdownOrder {
+    width: 100%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+#countdownWrapperOrder{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 50px auto;
+    display: inline-flex;
+}
+.lowerCountdownDiv{
+    background-color: #FFFFFF;
+    width: auto;
+    padding:5px 10px 10px;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 50px auto;
+    display: inline-flex;
+}
+
+#countdownOrderInformation{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    border-radius: 5px;
+    border: solid 2px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin: 0 20px 0 auto;
+    padding: 0px 0px 0px 0px;
+    background: #292929;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#countdownOrderInformation p{
+    display: inline;
+    justify-content: space-between;
+}
+
+#countdownRightOrderInformation{
+    width: 100%;
+    max-width: 250px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    height: auto;
+    border: solid 2px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto 0 20px;
+    padding: 0;
+}
+
+
+#countdownTopRestaurantInfo{
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    text-align: center;
+    padding: 15px;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.15);
+    justify-content: space-between;
+}
+
+#lowerOrderInfo{
+    display:inline-flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+
+
+}
+#countdownRightOrderInfoDiv{
+    padding:0px 20px 0px 0px;
+    justify-content: space-between;
+}
+
+#countdownLeftLowerOrderInfo{
+
+    padding:0px 50px 0px 0px;
+    text-align: right;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+
+.countdownRightLowerOrderInfoMyOrder{
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin:0px;
+}
+#countdownRightRestaurantInfo{
+
+    padding:0px 50px 0px 0px;
+    text-align: right;
+    justify-content: space-between;
+    position: relative;
+}
+#countdownLeftRestaurantInfo{
+    text-align: left;
+    float: left;
+    justify-content: space-between;
+
+}
+
+.countdownInformationListLeft{
+    list-style-type: none;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.countdownInformationListRight{
+    list-style-type: none;
+    text-align: right;
+
+}
+
+#countdownRightlowerOrderInfo{
+    text-align: center;
+    list-style-type: none;
+    padding: 0px 0px 0px 0px;
+
+}
+
+
+/* -----------------connectRestaurant-----------*/
+#connectMessage {
+    width: 100%;
+    height: 190px;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    resize: none;
+    margin: 5px 0;
+}
+#connectAccept{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: block;
+    margin: 2px auto 0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #DC4405;
+    border: none;
+    text-transform: capitalize;
+    outline: none;
+    cursor: pointer;
+}
+/* ------------ -------------*/
+#restaurantMessage {
+    width: 100%;
+    height: 140px;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    resize: none;
+    margin: 5px 0;
+}
+
+#restaurantAccept{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: block;
+    margin: 2px auto 0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #DC4405;
+    border: none;
+    text-transform: capitalize;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/*--------------------information------------*/
+#infoDiv{
+    height: 550px;
+    min-height: 250px;
+    width:auto;
+    margin: auto;
+    min-width: 815px;
+    max-width: 1000px;
+    overflow: scroll;
+    border: solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+#infoDiveWrapper{
+    height:auto;
+    width:auto;
+    text-align: center;
+    overflow: hidden;
+}
+.infoList{
+    list-style: none;
+    font-weight: bold;
+    text-align: left;
+    font-size: 25px;
+    margin: 20px 0px 0px 25px;
+}
+.titelTxt{
+    margin-bottom: inherit;
+}
+.infoText{
+    margin: 25px;
+}
+
+/*--------------------popUp conditions------------*/
+#conditionsDiv{
+    width: 100%;
+    max-width: 750px;
+    max-height: 750px;
+    height: auto;
+    position: relative;
+    margin: 0 auto 50px;
+    top: 10%;
+    left: 2%;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+#conditionsDiv::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
+
+#conditionsListDiv{
+    min-height: 650px;
+}
+
+
+#conditionsBack {
+    font-size: 30px;
+    float: right;
+
+}
+#topHeadDivConditions {
+    border-radius: inherit;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#conditionsList{
+    overflow: scroll;
+    height: 630px;
+}
+
+.conditionsClass{
+
+}
+/*--------------------work------------*/
+
+.workContactClass{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+
+
+#workInputWrapper{
+    width: 50%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    margin: auto;
+    padding: 0 5px;
+}
+
+/*----------------FORGOTTEN PASSWORD--------------------*/
+
+#forgottenpassDiv{
+    height: 550px;
+    min-height: 250px;
+    width: auto;
+    text-align: center;
+}
+.marginInput{
+    margin-top: 5px;
+}
+
+.inputForgottenPass{
+    display: inline-grid;
+}
+
+.passwordForgottenLabel{
+    text-align: center;
+}
+
+/*--------------------FAQ------------*/
+
+#faqDiv {
+    height: 550px;
+    min-height: 250px;
+    width:auto;
+    margin: auto;
+    min-width: 815px;
+    max-width: 1000px;
+    overflow: scroll;
+    border: solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+#faqDiv::-webkit-scrollbar-thumb{
+     background-color: #DC4405;
+ }
+
+#faqUpperWrapper{
+    height:auto;
+    width:auto;
+    text-align: center;
+    overflow: hidden;
+}
+.faqQuestionsList{
+    list-style: none;
+    font-weight: bold;
+    text-align: left;
+    font-size: 25px;
+    margin: 20px 0px 0px 25px;
+    color: #DC4405;
+}
+.faqQuestion{
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.faqAnswer{
+    display: none;
+    margin-bottom: 40px;
+    color: #292929;
+}
+
+/*-----------_CHAT_--------------*/
+#popUpWrapChat {
+    position: absolute;
+    bottom: 50px;
+    right: 25px;
+    overflow: auto;
+    display: none;
+    z-index: 99;
+}
+.bottomChat{
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+#send{
+    margin: 0; !important;
+    width: 25%;
+}
+#typeMessage{
+    width:70%;
+}
+#contentWrapperChat{
+    position: relative;
+    width: 380px;
+    height: 400px;
+    margin: 0 auto 50px;
+    top: 20%;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /*border-left: #95989A solid 2px;
+    border-top: #95989A solid 2px;
+    border-right: #95989A solid 2px;*/
+
+}
+.messageDiv{
+    height: 280px;
+    overflow-y: scroll;
+}
+.chatSupport{
+    height: 300px;
+    width: 400px;
+    position: absolute;
+}
+
+.blobAroundMessage{
+    float: right;
+    color: #FFFFFF;
+    background-color: #DC4405;
+    height: auto;
+    max-width: 85%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.replyMessage{
+    float: left;
+    color: #95989A;
+    /*background-color: #95989A;*/
+    height: auto;
+    max-width: 85%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+
+}
+.messageDiv{
+    padding: 8px;
+}
+
+
+
+/*--------------------Description------------*/
+
+.wrapperOfHowTo{
+    width: 90%;
+    max-width: 450px;
+    height: 100px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    display: inline-flex;
+    justify-content: space-between;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+}
+.contentOfHowTo{
+    text-align: center;
+}
+.contentOfHowTo p{
+    text-shadow: 0px 0px 3px #3E3E3E;
+}
+.roundOutline{
+    background-color: rgba(255, 255, 255, 0.50);
+    /*border: 2px solid #95989A;*/
+    cursor: pointer;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.whiteTxt{
+    margin-top: 8px;
+    color: #FFFFFF;
+}
+
+.stayInsideLines{
+}
+
+#forkAndKnife{
+    width: 50px;
+    height: auto;
+    margin: auto;
+}
+#store{
+    width: auto;
+    height: 40px;
+    margin: auto;
+}
+#creditCard{
+    width: 50px;
+    height: auto;
+    margin: auto;
+}
+
+
+#orderCDName{
+    text-align: right;
+}
+
+
+
+#headerTack{
+    width: 100%;
+    height: auto;
+    padding: 50px 0 0;
+}
+
+
+.pantonHeavy {
+    font-family: 'pantonheavy', 'Lat';
+}
+
+@font-face {
+    font-family: 'pantonheavy';
+    src: url('/web/fonts/fontfabric_-_panton-heavy-webfont.eot');
+    src: url('/web/fonts/fontfabric_-_panton-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/web/fonts/fontfabric_-_panton-heavy-webfont.ttf') format('truetype'),
+    url('/web/fonts/fontfabric_-_panton-heavy-webfont.svg#pantonheavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'pantonregular';
+    src: url('/web/fonts/fontfabric_-_panton-regular-webfont.eot');
+    src: url('/web/fonts/fontfabric_-_panton-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/web/fonts/fontfabric_-_panton-regular-webfont.ttf') format('truetype'),
+    url('/web/fonts/fontfabric_-_panton-regular-webfont.svg#pantonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.myordersRow:focus{
+    outline: 0 solid transparent;
+}
+.sentMessage:focus{
+    outline: 0 solid transparent;
+}
+
+/*#countdownOrder{
+
+    background-color: #F2F3F5;
+    width: 100%;
+    height: auto;
+    position: relative;
+    vertical-align: top;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+
+*/
+
+
+.txtBlue{
+color: #61B4E4;
+}
+
+
+
+
+/* -------------- COLORS --------------
+
+BLUE: #61B4E4
+PURPLE: #40404C
+BLACK: #292929
+WHITE: #FFFFFF
+RED: #EB524A
+
+ORANGE: #DC4405
+SKIN: #F8EBDC
+YELLOW: #F2A900
+PURPLE: #46245B
+GREEN: #5AAA96
+LIGHTORANGE: #D26A5B
+PINK: #8B0057
+
+*/
+
+#menuLogoHead{
+    width: auto;
+    height: 60px;
+    margin-left: 5%;
+}
+#menuLogoHeadImg{
+    max-height: 100%;
+    cursor: pointer;
+}
+
+
+/*--------------------Scroll Media queries------------*/
+
+@media screen and (max-width: 1030px){
+    /*.body{*/
+        /*width: 100%;*/
+        /*height: auto;*/
+        /*min-height: 100%;*/
+        /*position: relative;*/
+        /*display: block;*/
+        /*clear: both;*/
+        /*text-align: center;*/
+        /*margin: 0 !important;*/
+        /*padding: 0 !important;*/
+        /*opacity: 0;*/
+        /*overflow-y: scroll;*/
+    /*}*/
+    footer{
+        overflow: scroll;
+    }
+
+    header{
+        overflow-y: scroll;
+    }
+
+    .resizeFontSize{
+        font-size: 11px;
+    }
+
+    .resizeMargin{
+        margin: 6px;
+    }
+
+    .resizeLeft{
+        left:0;
+    }
+
+    .resizePadding{
+        padding:0;
+    }
+    .resizeMarginAuto{
+        margin:auto;
+    }
+
+    .resizePositionRelative{
+        position: relative;
+    }
+
+    /*--------------------Media Queries Settings------------*/
+
+    .resizeSettingsBody{
+        display: block;
+        justify-content: center;
+    }
+
+    #changePassDiv{
+        max-width: 300px;
+        margin: auto;
+    }
+
+    /*#changePassDiv{*/
+        /*max-width: 240px;*/
+        /*margin: 50px 0 50px 100px;*/
+    /*}*/
+
+    /*--------------------Media Queries UserOrders------------*/
+
+    .resizeOrdersDivClass{
+        min-width: 400px;
+        max-width: 900px;
+
+    }
+
+    .resizeRightSideDiv{
+        overflow-Y: scroll;
+        max-width: 400px;
+        min-width: 260px;
+        margin: 50px auto 0px 0px;
+    }
+
+    .resizeMyOrdersTable{
+        padding: 0 0px 15px;
+    }
+
+    .resizeWrapperMyOrders{
+        margin: 0px 0px 30px 50px;
+    }
+
+    /*--------------------Media Queries Search------------*/
+
+    .resizeSectionLeft{
+        position: relative;
+        right:0;
+        max-width:120px;
+    }
+
+    /*--------------------Media Queries SiteMeny------------*/
+
+
+    .ResizeSitemenuBodyWrapper{
+        justify-content:normal;
+        overflow: scroll;
+
+    }
+
+    /*--------------------Media Queries Payment------------*/
+
+    #paymentCartDiv {
+        margin: 50px 0 50px 255px;
+    }
+    .resizeSettingsDivClass{
+        max-width: 700px;
+    }
+
+    .resizeCart{
+        max-width: 215px;
+    }
+
+}
+@media screen and (max-width: 910px){
+
+    .resizeSettingsDivClass{
+        max-width: 640px;
+    }
+    #paymentCartDiv {
+        margin: 50px 0 50px 225px;
+    }
+
+    .resizeCart{
+        max-width: 195px;
+    }
+}
+
+
+/*--------------------Media Queries Height Cart sitemenu------------*/
+@media screen and (max-height: 600px){
+    .resizeCart{
+        max-height: 490px;
+        min-height: 400px;
+    }
+
+    .resizeMarginCart{
+        margin: 6px;
+    }
+
+
+    .resizeDemandsDivClass{
+        padding:0;
+        align-items: center;
+    }
+
+    .resizesitemenuRightSideDivHeadClass{
+        padding:0;
+    }
+
+    .resizePaddingCart{
+        padding:0;
+    }
+}
+
+
+@media screen and (max-height: 500px){
+    .resizeCart{
+        max-height: 455px;
+        min-height: 400px;
+    }
+
+    .resizeMarginZeroCart{
+        margin: 0px;
+    }
+
+    .resizeCheckBoxCart{
+        margin:0 10px 0 15px;
+    }
+
+    .resizePaymentCardLogo{
+        height: 40px;
+    }
+}
+

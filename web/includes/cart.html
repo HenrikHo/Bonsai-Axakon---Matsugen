@@ -1,0 +1,57 @@
+<div>
+    <div class="sitemenuRightSideDivHeadClass resizePaddingCart" id="sitemenuRightSideDivHead"> Min Order</div>
+    <div class="sitemenuCheckbox" id="sitemenuCheckbox">
+        <label>
+            <div class="checkbox resizeCheckBoxCart">
+                <input type="checkbox" class="sitemenuCb" id="sitemenuDelivery" onclick="changeCheckBoxDeliveryPickUp(0);setCheckBoxType(0);addDeliveryFee() ">
+            </div>
+        </label>
+        <label class="sitemenuCheckboxTxt txt14" for="sitemenuDelivery">Utkörning</label>
+        <label>
+            <div class="checkbox resizeCheckBoxCart">
+                <input type="checkbox" class="sitemenuCb" id="sitemenuPickUp" onclick="changeCheckBoxDeliveryPickUp(1);setCheckBoxType(1);addDeliveryFee()">
+            </div>
+        </label>
+        <label class="sitemenuCheckboxTxt txt14" for="sitemenuPickUp">Avhämtning</label>
+    </div>
+    <div class="demandsDivClass resizeDemandsDivClass" id="demandsDiv">
+        <p class="txt11">Minsta Beställning</p>
+        <p class="txt11">Utkörning  25kr</p>
+        <p class="txt11">(0kr om du beställer för mer än 300kr)</p>
+    </div>
+    <div class="paymentCardsDiv">
+        <img src="img/visa.png" class="paymentCardLogo resizePaymentCardLogo">
+        <img src="img/mastercard.png" class="paymentCardLogo resizePaymentCardLogo">
+        <img src="img/maestro.png" class="paymentCardLogo resizePaymentCardLogo">
+    </div>
+    <div class="sitemenuTableWrapper">
+        <div class="sitemenuTheadDiv resizeMarginZeroCart">
+            <div class="txt11">
+                <div class="sitemenuRightSideDivTableHead">
+                    <div class="col15">Antal</div>
+                    <div class="col50">Maträtt</div>
+                    <div class="col25">Summa</div>
+                    <div class="col10"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sitemenuTableDiv">
+            <div class="sitemenuRightSideDivTable txt11" id="sitemenuTableReceipt">
+                <ul id="sitemenuBill">
+                </ul>
+                <div id="sitemenuDeliveryCost">
+                    <div class="sitemenuRightSideDivTableBodyBottom">
+                        <div></div>
+                        <div>*Utkörning</div>
+                        <div id="deliveryCostFromJs"> *25kr</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sitemenuRightSideDivSummary resizeMarginCart">
+    <p class="txt16" id="totalSum"></p>
+    <p class="txt11" id="tax"></p>
+    <button class="sitemenuCartPay submitBtn resizeMarginCart" id="cartPayBtn" onclick="placeOrder()">BETALA</button>
+</div>
