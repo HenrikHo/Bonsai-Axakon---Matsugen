@@ -1,0 +1,1582 @@
+*{
+    box-sizing: border-box;
+    font-family: pantonregular;
+    z-index: 1;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    color: #DC4405;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+}
+html{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #F8EBDC;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+header, footer{
+    z-index:998;
+    background: #F8EBDC;
+    width: 100%;
+    height: auto;
+    position: sticky;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header{
+    top:0;
+    height: 80px;
+    max-height: 80px;
+    border-bottom: 2px solid #DC4405;
+}
+
+footer{
+    height: auto;
+    max-height: 100px;
+    border-top: 2px solid #F8EBDC;
+    bottom:0;
+    padding-bottom:1px !important;
+}
+
+input[type='checkbox']{
+    cursor: pointer;
+    display: none;
+}
+
+.body{
+    width: 100%;
+    height: auto;
+    min-height: calc(100% - 152px);
+    position: relative;
+    display: block;
+    clear: both;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #D26A5B;
+    border-radius: 0px;
+}
+
+
+/* -------------- STANDARD CLASSES -------------- */
+
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    position: absolute;
+    display: block;
+    clear: both;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.txt40{
+    font-size: 40px;
+    margin:0;
+}
+
+.txt20{
+    font-size: 20px;
+    margin: 0;
+}
+.txt16{
+    font-size: 16px;
+    margin: 0;
+}
+
+.txt14{
+    font-size: 14px;
+    margin: 0;
+}
+.txt11{
+    font-size: 11px;
+    margin: 0;
+}
+.txtOrange{
+    color: #DC4405;
+}
+
+.txtLeft{
+    float: left;
+}
+.txtRight{
+    float: right;
+}
+.txtMargin{
+    margin-top: 5px;
+}
+
+.opacity09{
+opacity: 0.9;
+}
+.opacity08{
+    opacity: 0.8;
+}
+.opacity07{
+    opacity: 0.7;
+}
+.opacity06{
+    opacity: 0.6;
+}
+.thin{
+    font-weight: 300;
+}
+.normal{
+    font-weight: 400;
+}
+.bold{
+    font-weight: 700;
+}
+
+.txtWhite{
+    color: #F8EBDC;
+}
+.txtAllWhite{
+    color: #FFFFFF;
+}
+
+.txtInputLogin {
+    margin: 20px auto 0px ;
+    font-size: 22px !important;
+}
+.txtInputFee{
+    width: 100px !important;
+
+}
+
+.txtInput{
+    width: 400px; /*100%*/
+    height: auto;
+    background-color: #f8ebdc; /*#09163D*/
+    border: none;
+    border-bottom: 1px solid #DC4405; /* #5E77AB*/
+    outline: none;
+    cursor: text;
+    font-size: 25px; /*14*/
+    padding: 10px;
+    text-align: center;
+}
+
+.txtInput::-webkit-input-placeholder {
+    font-size: 20px;
+    color: #DC4405; /*#F2F3F5*/
+    opacity: 0.5;
+}
+.txtInput::-moz-placeholder{
+    font-size: 14px;
+    color:  #DC4405; /*#F2F3F5*/
+    opacity: 0.5;
+}
+.txtInput:-ms-input-placeholder{
+    font-size: 14px;
+    color: #DC4405; /*#F2F3F5*/
+    opacity: 0.5;
+}
+.txtInput:-moz-placeholder{
+    font-size: 14px;
+    color:  #DC4405;/*#F2F3F5*/
+    opacity: 0.5;
+}
+
+.inputSeparator{
+    background-color: #F2F3F5;
+    width: 10px;
+    height: 1px;
+    opacity: 0.5;
+}
+
+.checkbox{
+    background-color: transparent;
+    width: 13px;
+    height: 13px;
+    align-self: center;
+    border: 1px solid #DC4405;
+    cursor: pointer;
+}
+
+.submitBtn{
+    background-color:  #DC4405; /*#5E77AB*/
+    color: #F2F3F5;
+    font-size: 17px; /*14*/
+    width: 100%;
+    max-width: 200px;
+    height: 45px; /*50*/
+    position: relative;
+    display: block;
+    border-radius: 17px; /*50*/
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: none;
+    margin: 40px auto 16px;
+    font-weight: 700;
+    font-family: pantonregular;
+}
+.list{
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.listObj{
+  /*  background: linear-gradient(to right, #3BA4C5, #84E3A5);*/
+    width: 100%;
+    height: 90px;    /*70*/
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 2px solid #F8EBDC;
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.listObj *{
+    display: inline-flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.listObj p{
+    display: inline;
+    margin: 0 10px;
+
+}
+
+.list li:last-child {
+    border-bottom: none;
+}
+
+.col100{
+    width: 100%;
+}
+.col75{
+    width: 75%;
+}
+.col50{
+    width: 50%;
+}
+.col35{
+    width: 35%;
+}
+.col25{
+    width: 25%;
+}
+.col20{
+    width: 20%;
+}
+.col15{
+    width: 15%;
+}
+.col10{
+    width: 10%;
+}
+
+
+
+
+.select{
+    width: 80px;
+    height: 30px;
+    background-color: #f8ebdc;
+    border: 1px solid #DC4405;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #DC4405;
+}
+
+.select option {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    text-align-last: center;
+    color: #333333;
+}
+
+
+
+
+
+/* ---------------------------- POPUP ---------------------------- */
+
+#popUpWrapLoader{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    display: none;
+    z-index: 9999999999;
+}
+
+.popUpWrap{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    display: none;
+    z-index: 999;
+}
+
+.popUpBtn{
+    background-color: #D26A5B;
+    color: #F2F3F5;
+    font-size: 14px;
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    position: relative;
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: none;
+    border-bottom: 1px solid #F8EBDC;
+    margin: 0;
+    font-weight: 300;
+
+}
+.noBorder{
+    border: none;
+}
+
+.sideMargin{
+    margin: 0 25px;
+}
+
+.popUp{
+    background-color: #F8EBDC;
+    border-radius: 15px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 99;
+    margin: auto;
+}
+.popUpCloseBtn{
+    cursor: pointer;
+    height: 25px !important;
+    min-height: 25px;
+    max-height: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.popUpSection{
+    overflow-y: auto;
+    min-height: 30px;
+}
+.arrows {
+    cursor: pointer;
+}
+
+
+
+/* ---------------------------- POPUP - NEW ORDER ---------------------------- */
+
+#newOrderDismiss{
+    background-color:#8B0057;
+    border-bottom: 1px rgba(211, 0, 24, 0.5);
+}
+
+
+.newOrderDiv{
+    max-width: 600px;
+    max-height: 400px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.newOrderDiv .popUpSection{
+    width: 50%;
+}
+
+#newOrderInfo{
+    padding: 25px;
+}
+#newOrderInfo p{
+    margin: 5px 0;
+}
+
+#newOrderTitle{
+    color: #84E3A5;
+    margin: 25px 0 0 !important;
+}
+
+/* ---------------------------- POPUP - OPENING TIMES / SPECIAL TIMES ---------------------------- */
+
+.timesPopUp{
+    max-width: 650px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timesPopUp .popUpSection{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    margin: 25px 0;
+}
+
+.timesPopUp .popUpSectionLast{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    margin: 0 0 auto !important;
+}
+
+.timesPopUp .popUpSection div{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.timesPopUp .popUpSubmitBtn{
+    position: relative;
+    align-self: flex-end;
+    margin: 25px 0 auto !important;
+}
+
+#specialTimesBtn{
+    width: 150px;
+    height: 30px !important;
+    min-height: 30px;
+    max-height: 30px;
+    border: none;
+    border-radius: 30px;
+}
+#addSpecialTimesBtn{
+    width: 225px;
+    height: 30px !important;
+    min-height: 30px;
+    max-height: 30px;
+    border: none;
+    border-radius: 30px;
+}
+#addSpecialTimesSubmitBtn{
+    background-color: #D26A5B;
+}
+.timesTable{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+.timesDay{
+    text-align: left;
+}
+.timesTable thead{
+    text-align: center;
+}
+.timesTable tbody{
+    text-align: center;
+}
+.timesTable tr {
+    height: 50px;
+}
+.timesTable .txtInput{
+    width: 40px;
+    padding: 10px 5px;
+}
+
+.weekSelect{
+    width: 150px;
+    height: 30px;
+    background-color: #09163D;
+    border: 1px solid rgba(242, 243, 245, 0.5);
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#specialTimesTable{
+    display: none;
+}
+
+#noSpecialTimes{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#autoFill{
+    border-bottom: 1px solid;
+    color: gray;
+    font-size: 20px;
+    margin-top: 15px;
+    width: 50%;
+}
+
+
+/*-----------Add special Times------------*/
+
+#monthPicker{
+
+}
+.contentOfMonthPicker{
+    height: 25px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    margin-bottom: 10px;
+}
+.arrows {
+    width: 25px;
+}
+#tableDatePicker{
+    width: 100%;
+    height: 200px;
+}
+#rowHeader{
+    display: flex;
+    justify-content: space-between;
+}
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+tr.tableRow td {
+    border-bottom: 1px solid rgba(220, 68, 5, .5);
+    border-collapse: collapse;
+
+}
+tr.tableRowHead td {
+    border-bottom:1pt solid rgba(220, 68, 5, 1);
+    border-collapse: collapse;
+
+}
+.bottomAddSpecialTimesDiv{
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    text-align: center;
+}
+#selectedDate{
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.addSpecialTimesTime{
+    width: 100%;
+}
+.inputAddSpecialTimes{
+    text-align: center;
+}
+.inputAddSpecialTimesContent{
+    width: auto;
+    display: inline-flex;
+    justify-content: space-around;
+}
+.checkboxCenter{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+    /* ---------------------------- Loading spinning Thing ---------------------------- */
+#loader {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    display: block;
+    z-index: 99999999;
+    margin: auto;
+    border: 10px solid #DC4405;
+    border-radius: 50%;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+/* -------------- INDEX -------------- */
+
+#logInBody{
+    min-height: 600px;
+}
+#logInLogoDiv{
+    position: relative;
+    width: 320px;  /*200*/
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto 150px; /*150 auto 100*/
+}
+#logInLogoDiv img{
+    width: 100%; /*50*/
+    height: 100%; /*50*/
+    margin: auto;
+}
+.formDiv{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.formDiv input{
+    text-align: center;
+}
+.formDiv p{
+    cursor: pointer;
+}
+#forgotFormDiv{
+    display: none;
+}
+
+/* -------------- MENU -------------- */
+
+.menuWrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.menuWrapper *{
+    align-self: center;
+}
+
+#menuLogoLink{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+#menuLogoLink *{
+    cursor: pointer;
+
+}
+#menuLogoLink img{
+    width: 50px;
+    height: 50px;
+}
+#menuLogoLink label{
+    margin-left: 15px;
+}
+
+#menuButtons{
+    width: 100%;
+    max-width: 700px;
+    height: 100%;  /*auto*/
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+   /* padding: 0 20px;*/
+}
+.menuLink{
+    color: #F2F3F5;
+    /*opacity: 0.5;*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    height:100%;
+    width:100%;
+    border: solid #DC4405;
+    border-bottom: 1px;
+    border-top: transparent;
+}
+
+.menuLinkLeft{
+    border-left: 1px !important;
+}
+.menuLinkRight{
+    border-right: 1px !important;
+}
+
+.menuLink *{
+    cursor: pointer;
+}
+
+.menuLinkTxt{
+    margin: 13px 0 10px;
+    font-size: 20px;
+}
+.menuIndicator{
+    background-color: #334887;
+    width: 30px;
+    height: 3px;
+    border-radius: 25px;
+    display: none;
+}
+
+#menuStatus{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#menuStatus img{
+    width: 20px;
+    height: 20px;
+}
+#menuStatus label{
+    margin-right: 10px;
+    color: #DC4405;
+    font-weight: 700;
+}
+
+
+/* -------------- History -------------- */
+
+.historyObj{
+    margin:0 auto !important;
+    width: 420px !important;
+    min-width: 250px !important;
+}
+
+#historyWrap{
+    display: flex;
+    justify-content: center;
+}
+
+.historyWrapNotDelivered{
+
+}
+
+.historyWrapPickedUp{
+    background-color: #D26A5B !important;
+}
+
+.historyWrapNotPickedUp{
+    background-color: #8B0057 !important;
+}
+
+
+.infoTextDivs{
+
+}
+
+#messageDiv{
+    height: 600px;
+    width: 800px;
+
+}
+.messageHeadDiv{
+    padding-left: 10px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+
+}
+.messageContent{
+    padding: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#listAllUnreadMessages{
+    padding-right: 10px;
+    list-style: none;
+}
+
+#listAllMessages{
+    padding-right: 10px;
+    list-style: none;
+}
+.displayMessage{
+
+    padding-left: 25px;
+    width: 400px;
+}
+
+.messageListElement{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 30px;
+    border-bottom: 1px solid #DC4405;
+}
+#listAllUnreadMessages{
+    color: white;
+}
+
+/* -------------- FOOTER -------------- */
+
+#footer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    bottom:0;
+}
+
+.footerLink{
+    height: 75%;
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    padding: 20px 20px;
+    cursor: pointer;
+    border: solid 2px rgba(220, 68, 5, .5);
+}
+.footerLink *{
+    cursor: pointer;
+}
+
+.footerLink img{
+    margin-right: 10px;
+    max-height: 25px;
+    max-width: 25px;
+}
+.imgTxt{
+    text-align: center;
+    align-self: center;
+}
+
+/* -------------- ORDERS -------------- */
+.importantInfo{
+    display: grid;
+}
+.orderObjInfo{
+ /*   background-color: rgba(9, 22, 61, 0.3);*/
+    width: calc(100% - 150px); /*400*/
+    min-width: 250px;
+    height: 60px;  /*30*/
+    border-radius: 70px;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.listObjInfoAddress{
+    font-weight: 400;
+}
+.listObjInfoTime{
+    width: 120px;
+}
+
+.carBtnObj{
+    width: 30%;
+    height: 60px;
+    border-radius: 15px;
+}
+
+.orderCars{
+    width: 100%;
+}
+
+.carBtnObjDone{
+    background: #d26a5b;
+    width: 50%;  /*70*/
+    height: 60px;   /*30*/
+    border-radius: 15px; /*70*/
+    margin: 0 0 0 20px;
+}
+
+#noOrdersMsg{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+/* -------------- SALES REPORT -------------- */
+
+#salesDetailsDiv {
+    width: 500px;
+    height: 300px;
+    overflow: hidden !important;
+}
+
+.salesBtnShowReport{
+    position: absolute;
+    align-self: flex-end;
+    margin: auto;
+    width: 100%;
+    bottom: 0;
+    color: #D26A5B;
+}
+
+.salesSection {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding-left: 25px;
+    overflow: hidden;
+}
+
+.salesCloseBtnDiv{
+    padding: 10px;
+
+}
+
+#popUpWrapSalesDetails{
+    z-index: 998;
+}
+
+.carNameDivclass{
+    display: flex;
+    justify-content: space-around;
+}
+#addCarDiv {
+    width: 500px;
+    height: 300px;
+    overflow: hidden !important;
+}
+#addDriverDiv {
+    width: 500px;
+    height: 300px;
+    overflow: hidden !important;
+}
+
+#userNameNameDiv{
+    display: flex;
+    justify-content: space-around;
+}
+#userNameInput{
+    width: 50%;
+
+}
+#driverPw{
+    width: 100%;
+}
+
+
+#popUpWrapAddCar{
+    z-index: 998;
+}
+.addCarInputs{
+    width: 100%;
+    margin: auto;
+}
+
+#carNameInput{
+    width: 90%;
+}
+#carRegNumber{
+    width: 90%;
+}
+
+.statisticsBtn {
+    width:280px;
+    min-width: 150px;
+    border-radius: 25px;
+    margin: auto;
+    background: #DC4405 !important;
+}
+
+.selectedFieldsSales{
+    width: 155px;
+    height: 35px;
+    border: none;
+    background: #F8EBDC;
+    border: none;
+    border-bottom: solid;
+    border-bottom-width:2px;
+    font-size: 20px;
+    outline: none;
+}
+
+.selectedFieldsSales:focus,input:focus{
+    outline:none;
+}
+
+.selectedFieldsSales:focus{
+    outline:0;
+}
+
+.salesDetailsInfo{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 70px 70px 45px 70px;
+}
+
+.statisticsNumber{
+    padding: 120px 70px 45px 70px !important;
+}
+
+#salesStatisticsDiv{
+    max-width: 1100px;
+    min-width: 250px;
+    max-height: 700px;
+    min-height: 400px;
+}
+
+#statisticsWrapperBackground{
+
+  /*  background-image: url("../img/statisticsChart.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: calc(100% - 79px);*/
+}
+
+
+#salesRepportSend{
+    width: 500px;
+    height: 300px;
+    overflow: hidden !important;
+}
+
+.txtInSalesRepport{
+    padding-left: 25px;
+    margin: 0;
+}
+
+#graphCanvas{
+    min-width:300px;
+    min-height: 200px;
+    margin:auto;
+
+}
+.messageH2{
+    background-color: #D26A5B;
+    color: antiquewhite;
+    height: 45px;
+    text-align: center;
+}
+
+
+
+/* -------------- ORDER DETAILS PRINT OUT -------------- */
+
+
+.orderCommentTextarea{
+    width: 100%;
+    height: auto;
+    resize: none;
+    border: none;
+    background: #F8EBDC;
+    color: black;
+    outline: none;
+}
+
+#orderDetailsDiv{
+    max-width: 600px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#orderDetailsDiv .popUpSection{
+    width: 100%;
+    min-height: 40px;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    margin: 25px 0 0;
+}
+#orderDetailsInfo{
+    margin: 0 0 auto !important;
+    padding: 0 25px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+#orderDetailsInfo p{
+    margin: 0 0 5px;
+}
+
+#orderDetailsTitle{
+    color: #84E3A5;
+    margin: 25px 0 0 !important;
+}
+
+#orderDetailsDiv .popUpSubmitBtn{
+    position: relative;
+    align-self: flex-end;
+    margin: 25px 0 auto !important;
+}
+
+
+/* -------------- CARS -------------- */
+#carsWrap{
+    width: 100%;
+    height: auto;
+    min-width: 220px;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    overflow: scroll;
+
+}
+
+.listObjDiv{
+    width: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.listObjDiv *{
+    cursor: pointer;
+}
+
+.listObjDivLev, .listObjDivLevDone{
+    width: 40%;
+    cursor: pointer;
+    margin: 0;
+}
+.listObjDivLev *, .listObjDivLevDone *{
+    cursor: pointer;
+}
+
+
+.listObjCarsDiv{
+    width: 100%;
+}
+
+.carNotHome{
+    display: inline-grid;
+}
+
+.carObj{
+    width: 100%;
+    min-width: 75px;
+    max-width: 190px;
+    height: auto;
+    max-height: 700px;
+    margin: 0 5px ;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.carObj .carObjName {
+    margin: 15px auto 5px;
+}
+.carObj .carObjNumber{
+    margin: 5px auto 15px;
+}
+.carObjListWrap{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.carObj .list{
+    opacity: 1;
+}
+
+.carObj .listObj{
+
+  /*  background: linear-gradient(to right, #44AABE, #5EBCAB);*/
+    height: 80px;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 30px 0;
+    padding: 10px;
+}
+
+.carObj .listObj *{
+   /* display: inline-flex;*/
+    justify-content: space-around;
+    align-self: center;
+    color: white;
+    width:auto;
+}
+
+.labelFee{
+    padding: 15px;
+}
+
+.carListInfo{
+    list-style: none;
+}
+
+.carObj .listObj p{
+    display: inline;
+    margin: 0 10px;
+}
+.listObjNumber{
+    margin: 0 10px 0 0 !important;
+}
+
+.carObj .listObj div{
+    width: 100%;
+  /*  display: inline-flex; */
+   /* justify-content: space-between;*/
+    align-self: center;
+}
+
+.carNotHomeColor{
+    color: #DC4405 !important;
+}
+
+.carStartShipment{
+    border-radius: 15px;
+    margin:0 8px;
+    width:auto;
+    background: #DC4405;
+}
+
+.carOrderStatus{
+    width: 100%;
+    text-align: center;
+}
+.carObjInfo{
+    background-color: #5AAA96;
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.carObjInfoDiv{
+    display: inline-grid;
+}
+.carInfoTextDiv{
+    justify-content: space-between !important;
+}
+.styleThis{
+    left: 5px;
+    height: 50px;
+    width: 50px;
+    background-color: #F2A900;
+}
+
+
+#carsWrap::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+#carsWrap::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+#carsWrap::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.carObjListWrap::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.carObjListWrap::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+.carObjListWrap::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.carObjListObjClass{
+    padding: 5px;
+}
+.carobjDisplayBlock{
+    display:block;
+}
+
+
+/*---------------------MAP-------------------*/
+#mapWrap{
+    height: 600px;
+    max-height: 600px;
+}
+
+.bodyHead{
+    display: inline-flex;
+    justify-content: space-around;
+    height: 75px;
+    width: 100%;
+}
+.carLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    color:  #D26A5B;
+}
+
+.infoContent{
+    width: 145px;
+    height: 45px;
+    padding: 5px;
+}
+
+.gm-style-iw{
+    width: 150px !important;
+    height: 50px !important;
+    top: 45px !important;
+    left: 25px !important;
+    background-color: #5AAA96;
+    /*box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);*/
+    /*border: 1px solid rgba(72, 181, 233, 0.6);*/
+    border-radius: 8px 8px 8px 8px;}
+
+
+
+
+
+/*---------------------MAPEND------------------*/
+
+/*---------------------SETTINGS---------------------*/
+
+#settingsWrap{
+    display: flex;
+    justify-content: space-around;
+}
+
+.settingsWrapper{
+    width: 50%;
+    height: auto;
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+/*.settingsWrapper #newAdForm{*/
+    /*width: 100% !important;*/
+    /*max-width: 500px;*/
+    /*height: 190px;*/
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*padding: 0 20px;*/
+/*}*/
+
+.settingsAddNewInformationDiv{
+    width: 100% !important;
+    max-width: 500px;
+    height: 190px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.adAndRadiousSelect{
+    width:140px;
+}
+
+
+.settingsWrapper #categoriesListFood{
+    width: 100% !important;
+    max-width: 300px;
+    height: auto;
+    max-height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+
+.settingsWrapper .categoryObj{
+    width: 100%;
+    height: 50px !important;
+    min-height: 50px !important;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.settingsWrapper .checkboxTxt{
+    margin: 0 0 0 20px;
+}
+
+#adsList{
+    width: 100% !important;
+    max-width: 500px;
+    height: auto;
+    max-height: 600px;
+}
+
+
+
+
+/*---------------------------------------------*/
+
+@font-face {
+    font-family: 'pantonheavy';
+    src: url('/rtc/fonts/fontfabric_-_panton-heavy-webfont.eot');
+    src: url('/rtc/fonts/fontfabric_-_panton-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/rtc/fonts/fontfabric_-_panton-heavy-webfont.ttf') format('truetype'),
+    url('/rtc/fonts/fontfabric_-_panton-heavy-webfont.svg#pantonheavy') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pantonregular';
+    src: url('/rtc/fonts/fontfabric_-_panton-regular-webfont.eot');
+    src: url('/rtc/fonts/fontfabric_-_panton-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/rtc/fonts/fontfabric_-_panton-regular-webfont.ttf') format('truetype'),
+    url('/rtc/fonts/fontfabric_-_panton-regular-webfont.svg#pantonregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+
+
+
+/* -------------- Media queries  -------------- */
+
+@media screen and (max-width: 1120px){
+
+    .resizeFontSize{
+        font-size: 14px;
+    }
+
+    .resizePopUpCloseBtn{
+        min-height: 5px;
+        max-height: 20px;
+        margin: auto;
+        margin-left: 5px;
+    }
+
+    .resizeCarObj{
+        max-width: 180px;
+        display: block;
+    }
+
+}
+
+
+
+/* --------------  -------------- */
+
+/* --------------  -------------- */
+
+/* -------------- COLORS --------------
+
+Background blue: #09163D
+White: #F2F3F5
+
+Button blue: #5E77AB
+Another blue (menu indicator): #334887
+
+Separator blue (footer/header): #192C62
+
+Border White: 1px solid rgba(242, 243, 245, 0.5);
+Washed out white: rgba(242, 243, 245, 0.5);
+Red: rgba(211, 0, 24, 0.5);
+
+
+
+Fade blue : #3BA4C5  //0%
+
+            #44AABE  //25%  //default color
+            #4DB0B8  //50%
+
+            #55B6B1  //75%
+Fade green: #5EBCAB  //100%
+
+
+            #70CFA8
+Fade lime:  #84E3A5
+
+Background blue with 30% opacity: rgba(9, 22, 61, 0.3); //good for text background
+
+ORANGE: #DC4405
+SKIN: #F8EBDC
+YELLOW: #F2A900
+PURPLE: #46245B
+GREEN: #5AAA96
+LIGHTORANGE: #D26A5B
+PINK: #8B0057
+
+*/
+
+

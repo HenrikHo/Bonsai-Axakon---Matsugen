@@ -1,0 +1,557 @@
+<div id="popUpWrapLoader">
+    <div id="loader"></div>
+</div>
+<div class="popUpWrap" id="popUpWrapNewOrder"></div>
+
+<div class="popUpWrap popUpWrapClose" id="popUpWrapOrderDetails">
+    <div class="popUp" id="orderDetailsDiv">
+        <div class="popUpSection" id="orderDetailsDivAdress">
+          <h2 class="bold" id="orderDetailsAddress"></h2>
+            <div>
+                <img class="popUpCloseBtn" src="../rtc/img/close.png" onclick="closeOrderDetails()">
+            </div>
+        </div>
+        <div class="popUpSection" id="orderDetailsInfo">
+           <!---- <h2 id="orderDetailsAddress">*Kungsgatan 28A</h2>------>
+            <p class="txt16 normal" id="orderDetailsPostal"></p>
+            <p class="txt16 normal" id="orderDetailsFloor"></p>
+            <p class="txt16 normal" id="orderDetailsName"></p>
+            <p class="txt16 normal" id="orderDetailsCustomerTime"></p>
+            <p class="txt16 normal" id="orderDetailsIncomingTime"></p>
+            <div id="orderCommentDiv">
+                <textarea readonly class="orderCommentTextarea" id="commentTextAreaOrderDetails" placeholder="Ingen kommentar"></textarea>
+            </div>
+            <!----<p class="txt15 normal" id="orderDetailsTitle">*Order:</p>---->
+            <h2 id="orderDetailsTitle"></h2>
+            <div id="orderDetailsDetails">
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+                <p class="txt16 normal"></p>
+            </div>
+        </div>
+
+        <div>
+            <button onclick="print('orderDetailsInfo','orderDetailsAddress')" class="popUpBtn popUpSubmitBtn noBorder" id="orderDetailsPrintBtn">Skriv ut</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="popUpWrap popUpWrapClose" id="popUpWrapOpeningTimes">
+    <div class="popUp timesPopUp" id="openingTimesDiv">
+        <div class="popUpSection">
+            <p class="txt20">Öppettider</p>
+            <div>
+                <button class="popUpBtn noBorder sideMargin" id="specialTimesBtn" onclick="openSpecialTimes()">Avvikelser</button>
+                <img class="popUpCloseBtn" src="../rtc/img/close.png" onclick="closeOpeningTimes()">
+            </div>
+        </div>
+        <div class="popUpSection popUpSectionLast">
+            <table class="timesTable">
+                <thead>
+                    <tr>
+                        <td class="col20"></td>
+                        <td class="col10">Stängt</td>
+                        <td class="col35">Utkörning</td>
+                        <td class="col35">Avhämtning</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col20 timesDay">Måndag:</td>
+                        <td class="col10">
+                            <label>
+                                <div class="checkbox"><input type="checkbox" id="monCloseCb" onclick="checkboxClick(this); closeBusinessCheckBox(this, 0)"></div>
+                            </label>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="monDeliveryFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="monDeliveryTo"></select>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="monPickUpFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="monPickUpTo"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col20 timesDay">Tisdag:</td>
+                        <td class="col10">
+                            <label>
+                                <div class="checkbox"><input type="checkbox" id="tueCloseCb" onclick="checkboxClick(this); closeBusinessCheckBox(this, 1)"></div>
+                            </label>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="tueDeliveryFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="tueDeliveryTo"></select>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="tuePickUpFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="tuePickUpTo"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col20 timesDay">Onsdag:</td>
+                        <td class="col10">
+                            <label>
+                                <div class="checkbox"><input type="checkbox" id="wedCloseCb" onclick="checkboxClick(this); closeBusinessCheckBox(this, 2)"></div>
+                            </label>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="wedDeliveryFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="wedDeliveryTo"></select>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="wedPickUpFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="wedPickUpTo"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col20 timesDay">Torsdag:</td>
+                        <td class="col10">
+                            <label>
+                                <div class="checkbox"><input type="checkbox" id="thuCloseCb" onclick="checkboxClick(this); closeBusinessCheckBox(this, 3)"></div>
+                            </label>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="thuDeliveryFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="thuDeliveryTo"></select>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="thuPickUpFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="thuPickUpTo"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col20 timesDay">Fredag:</td>
+                        <td class="col10">
+                            <label>
+                                <div class="checkbox"><input type="checkbox" id="friCloseCb" onclick="checkboxClick(this); closeBusinessCheckBox(this, 4)"></div>
+                            </label>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="friDeliveryFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="friDeliveryTo"></select>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="friPickUpFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="friPickUpTo"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col20 timesDay">Lördag:</td>
+                        <td class="col10">
+                            <label>
+                                <div class="checkbox"><input type="checkbox" id="satCloseCb" onclick="checkboxClick(this); closeBusinessCheckBox(this, 5)"></div>
+                            </label>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="satDeliveryFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="satDeliveryTo"></select>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="satPickUpFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="satPickUpTo"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col20 timesDay">Söndag:</td>
+                        <td class="col10">
+                            <label>
+                                <div class="checkbox"><input type="checkbox" id="sunCloseCb" onclick="checkboxClick(this); closeBusinessCheckBox(this, 6)"></div>
+                            </label>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="sunDeliveryFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="sunDeliveryTo"></select>
+                        </td>
+                        <td class="col35">
+                            <select class="select timeSelect" id="sunPickUpFrom"></select>
+                            <div class="inputSeparator"></div>
+                            <select class="select timeSelect" id="sunPickUpTo"></select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <button class="popUpBtn popUpSubmitBtn noBorder" id="openingTimesSubmitBtn" onclick="changeDefaultBusinessHours()">Spara</button>
+        </div>
+    </div>
+</div>
+
+<div class="popUpWrap" id="popUpWrapSpecialTimes">
+    <div class="popUp timesPopUp" id="specialTimesDiv">
+        <div class="popUpSection">
+            <p class="txt20">Avvikelser</p>
+            <div>
+                <button class="popUpBtn noBorder sideMargin" id="addSpecialTimesBtn" onclick=" addSpecialTimes(3), formatDate(new Date());">Lägg Till Avvikelser</button>
+                <img class="popUpCloseBtn" src="../rtc/img/close.png" onclick="closeSpecialTimes()">
+            </div>
+        </div>
+        <div class="popUpSection popUpSectionLast">
+            <table class="timesTable" id="specialTimesTable">
+                <thead>
+                <tr>
+                    <td class="col20"></td>
+                    <td class="col10">Stängt</td>
+                    <td class="col35">Utkörning</td>
+                    <td class="col35">Avhämtning</td>
+                </tr>
+                </thead>
+                <tbody id="specialTimesTbody">
+                </tbody>
+            </table>
+            <p id="noSpecialTimes">
+                Inga avvikelser.
+            </p>
+        </div>
+        <div>
+            <button class="popUpBtn popUpSubmitBtn noBorder" id="specialTimesSubmitBtn" onclick="changeSpecialBusinessHours()">Spara</button>
+        </div>
+    </div>
+</div>
+
+<div class="popUpWrap" id="popUpWrapAddSpecialTimes">
+    <div class="popUp timesPopUp" id="addSpecialTimesDiv">
+        <div class="popUpSection">
+            <p class="txt20 txtOrange">Lägg till avvikelser</p>
+            <img class="popUpCloseBtn" src="../rtc/img/close.png" onclick="closeAddSpecialTimes()">
+        </div>
+        <div class="contentOfMonthPicker"id="monthPicker">
+            <img class="arrows" src="../rtc/img/back.png" id="prevMonth">
+            <p class="txtOrange txt20" id="monthSelect" > Month </p>
+            <img class="arrows" src="../rtc/img/next.png" id="nextMonth">
+        </div>
+        <div class="popUpSection popUpSectionLast">
+        <table class="" id="tableDatePicker">
+            <thead>
+            <tr class="tableRowHead">
+                <td class="txtOrange txt16" id="mon">Mån</td>
+                <td class="txtOrange txt16" id="tue">Tis</td>
+                <td class="txtOrange txt16" id="wed">Ons</td>
+                <td class="txtOrange txt16" id="thur">Tors</td>
+                <td class="txtOrange txt16" id="fri">Fre</td>
+                <td class="txtOrange txt16" id="sat">Lör</td>
+                <td class="txtOrange txt16" id="sun">Sön</td>
+            </tr>
+            </thead>
+            <tbody id="tbodyCalender">
+            <tr class="tableRow">
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column0"></td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column1"></td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column2"></td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column3"></td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column4"></td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column5"></td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column6"></td>
+            </tr>
+            <tr class="tableRow">
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column7">*8</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column8">*9</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column9">*10</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column10">*11</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column11">*12</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column12">*13</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column13">*14</td>
+            </tr>
+            <tr class="tableRow">
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column14">*15</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column15">*16</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column16">*17</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column17">*18</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column18">*19</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column19">*20</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column20">*21</td>
+            </tr>
+            <tr class="tableRow">
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column21">*22</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column22">*23</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column23">*24</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column24">*25</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column25">*26</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column26">*27</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column27">*28</td>
+            </tr>
+            <tr class="tableRow">
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column28">*29</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column29">*30</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column30">*31</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column31"></td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column32"></td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column33"></td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column34"></td>
+            </tr>
+            <tr class="tableRowLast">
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column35">*29</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column36">*30</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column37">*29</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column38">*30</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column39">*29</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column40">*30</td>
+                <td class="txtOrange txt16" onclick="selectColumn(this.id)" id="column41">*30</td>
+
+            </tr>
+            </tbody>
+        </table>
+
+
+
+        </div>
+
+        <div class="bottomAddSpecialTimesDiv">
+                <p class="col15" id="selectedDate">*17-09-17</p>
+                <div class="checkboxSection col10" >
+                    <label class="checkboxTxt" for="closedCb">
+                        <p id="pInCheckBox">Stängt</p>
+                    </label>
+                    <div class="checkboxCenter">
+                    <label>
+                        <div class="checkbox"><input type="checkbox" id="closedCb" onclick="checkboxClick(this); closeBusinessCheckBox(this, 0, 2)"></div>
+                    </label>
+                    </div>
+                </div>
+                <div class="inputAddSpecialTimes col25">
+                        <p>Utkörning</p>
+                    <div class="inputAddSpecialTimesContent">
+                        <select class="select timeSelect" id="deliveryFromAddSpecial"></select>
+                        <div class="inputSeparator"></div>
+                        <select class="select timeSelect" id="deliveryToAddSpecial"></select>
+                    </div>
+                </div>
+
+                <div class="inputAddSpecialTimes col25">
+
+                    <p>Avhämtning</p>
+                    <div class="inputAddSpecialTimesContent">
+                        <select class="select timeSelect" id="pickupFromAddSpecial"></select>
+                        <div class="inputSeparator"></div>
+                        <select class="select timeSelect" id="pickupToAddSpecial"></select>
+                    </div>
+                </div>
+
+            </div>
+
+        <div>
+            <button class="popUpBtn popUpSubmitBtn noBorder" id="addSpecialTimesSubmitBtn" onclick="saveChangedTimes()">Spara</button>
+        </div>
+    </div>
+</div>
+
+
+<!--------------FörsäljningsRapport-------------->
+
+<div class="popUpWrap popUpWrapClose" id="popUpWrapSalesDetails">
+    <div class="popUp" id="salesDetailsDiv">
+        <div class="popUpSection salesSection" id="salesSection">
+            <h1>Försäljningsrapport</h1>
+            <div class="salesCloseBtnDiv">
+                <img class="popUpCloseBtn" src="../rtc/img/close.png" id="closeBtnSalesReport" onclick="closeSalesDetailsDate();">
+            </div>
+        </div>
+        <p class="txtInSalesRepport">Välj datum från och till:<p>
+        <div class="popUpSection salesDetailsInfo">
+
+            <div id="selectedFrom">
+                <select id="selectedDateFrom" class="selectedFieldsSales" onclick="addSpecialTimes(1) ,formatDate(new Date());">
+                    <option id="selectedOptionsFrom" hidden>Från:</option>
+                </select>
+            </div>
+            <div id="selectedTo">
+                <select id="selectedDateTo" class="selectedFieldsSales" onclick="addSpecialTimes(2), formatDate(new Date());">
+                    <option hidden>Till:</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="salesBtnShowReport">
+            <button class="popUpBtn popUpSubmitBtn noBorder" id="salesShowReport" onclick="$.getScript('../rtc/js/graph.js')" >Visa rapport</button>
+        </div>
+    </div>
+</div>
+
+<!-----------------AddCar---------------->
+<div class="popUpWrap popUpWrapClose" id="popUpWrapAddCar">
+    <div class="popUp" id="addCarDiv">
+        <div class="popUpSection salesSection" id="addCarSection">
+            <h1>Lägg till en bil</h1>
+            <div class="salesCloseBtnDiv"> <!-- same as in FörsäljningsRapport-->
+                <img class="popUpCloseBtn" src="../rtc/img/close.png" onclick="closeAddCar()">
+            </div>
+        </div>
+        <p class="txtInSalesRepport">Skriv in bilens upgifter:<p>
+        <div class="popUpSection addCarInputs">
+
+            <div id="carNameDiv" class="carNameDivclass">
+                <input type="text" class="txtInput " id="carNameInput" placeholder="Bilens namn">
+            </div>
+
+
+            <div id="carRegistrationNr" class="carNameDivclass">
+                <input type="text" class="txtInput " id="carRegNumber" placeholder="Bilens regnummer">
+            </div>
+
+        </div>
+        <div class="salesBtnShowReport">
+            <button class="popUpBtn popUpSubmitBtn noBorder" onclick="addCar();" >Lägg Till Bil</button>
+        </div>
+    </div>
+</div>
+
+<!-----------------AddDriver---------------->
+<div class="popUpWrap popUpWrapClose" id="popUpWrapAddDriver">
+    <div class="popUp" id="addDriverDiv">
+        <div class="popUpSection salesSection" id="addDriverSection">
+            <h1>Lägg till en förare</h1>
+            <div class="salesCloseBtnDiv"> <!-- same as in FörsäljningsRapport-->
+                <img class="popUpCloseBtn" src="../rtc/img/close.png" onclick="closeDriver()">
+            </div>
+        </div>
+        <p class="txtInSalesRepport">Skriv in förarens upgifter:<p>
+        <div class="popUpSection addCarInputs">
+
+            <div id="userNameNameDiv">
+                <input type="text" class="txtInput " id="userNameInput" placeholder="Användarnamn">
+                <a id="autoFill">@Restaurangen.se</a>
+            </div>
+
+
+            <div id="driverPwDiv">
+                <input type="password" class="txtInput " id="driverPw" placeholder="Lösenord">
+            </div>
+
+        </div>
+        <div class="salesBtnShowReport">
+            <button class="popUpBtn popUpSubmitBtn noBorder"  onclick="addDriverToSite();" >Lägg förare</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="popUpWrap" id="salesStatistics">
+    <div class="popUp" id="salesStatisticsDiv">
+        <div class="popUpSection salesSection" >
+            <h1>Försäljningsrapport</h1>
+            <div class="salesCloseBtnDiv">
+                <img class="popUpCloseBtn" src="../rtc/img/close.png" id="btnCloseSalesStatistics" onclick="closeSalesStatistics();">
+            </div>
+        </div>
+        <p class="txtInSalesRepport" onclick="$.getScript('../rtc/js/graph.js')">*2017-01-09 till 2017-08-09</p>
+
+        <div class="popUpSection salesDetailsInfo"  id="statisticsWrapperBackground">
+
+            <canvas id="graphCanvas" width="800" height="450"></canvas>
+
+        </div>
+        <div class="salesBtnShowReport">
+            <button class="popUpBtn popUpSubmitBtn noBorder statisticsBtn" id="btnOpenSendReport" onclick="openSendReportToEmail();">Maila rapport</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="popUpWrap" id="sendReportToEmail">
+    <div class="popUp" id="salesRepportSend">
+        <div class="popUpSection salesSection" >
+            <h1>Försäljningsrapport</h1>
+            <div class="salesCloseBtnDiv">
+                <img class="popUpCloseBtn" src="../rtc/img/close.png" id="btnCloseSendRepport" onclick="closeSendReportToEmail()">
+            </div>
+        </div>
+        <p class="txtInSalesRepport">Vill du ändra vald adress, klicka i fältet och fyll i</p>
+
+        <div class="popUpSection salesDetailsInfo">
+            <input type="text" class="txtInput" placeholder="ExempelMail@mail.se">
+        </div>
+        <div class="salesBtnShowReport">
+            <button class="popUpBtn popUpSubmitBtn noBorder" id="">Skicka rapport</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="popUpWrap" id="popUpMessage">
+
+    <div class="popUp" id="messageDiv">
+        <div class="messageHeadDiv">
+            <h1 id="scrollThis" >Meddelanden</h1>
+            <div class="salesCloseBtnDiv">
+                <img class="popUpCloseBtn" src="../rtc/img/close.png" onclick="closeMessage()">
+            </div>
+        </div>
+
+        <div class="messageContent">
+            <div class="allMessages" id="overViewList">
+                <h2 class="messageH2">Olästa meddelanden</h2>
+                <ul id="listAllUnreadMessages">Olästa meddelanden</ul>
+
+                <h2 class="messageH2">Meddelanden</h2>
+                <ul id="listAllMessages">Meddelanden</ul>
+
+
+            </div>
+            <div class="displayMessage">
+                <h3 id="subjectOfSpecificMessage"></h3>
+
+                <p id="theMessage"></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
